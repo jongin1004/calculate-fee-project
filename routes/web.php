@@ -19,3 +19,5 @@ Route::post('file-import', [DataController::class, 'fileImport'])->name('file-im
 Route::get('file-export', [DataController::class, 'fileExport'])->name('file-export');
 Route::get('file-reset', [DataController::class, 'fileReset'])->name('file-reset');
 Route::get('/data-show', [DataController::class, 'showData'])->name('data-show');
+// Route::get('/data-search', [DataController::class, 'fillteringData'])->name('data-search');
+Route::any('/data-search', [DataController::class, 'fillteringData'])->name('data-search');

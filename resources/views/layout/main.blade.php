@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1877f468c8.js" crossorigin="anonymous"></script>
 
         <style>
             body {
@@ -34,6 +35,17 @@
             
             .header {
                 position: absolute;
+                margin-left: 5vw;
+            }
+
+            .search_container {
+                position: relative;
+            }
+
+            #search {
+                position: absolute;
+                left: 8px;
+                top: 5px;
             }
         </style>
     </head>

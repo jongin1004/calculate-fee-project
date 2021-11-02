@@ -8,6 +8,7 @@ use App\Imports\DatasImport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
+use Symfony\Component\Console\Input\Input;
 
 class DataController extends Controller
 {
@@ -66,5 +67,37 @@ class DataController extends Controller
         return view('show-data', [
             'datas' => $datas
         ]);
+    }
+
+    public function fillteringData(Request $request)
+    {
+
+        // $dataSearch = $request->get('data-search');
+
+        // $datas = Data::where('name','LIKE','%'.$request['search'].'%')
+        //                 ->paginate(7)
+        //                 ->onEachSide(1);
+
+
+         if($request['search'] != ""){
+            $datas = Data::where('name', 'LIKE', '%'.$request['search'].'%')
+                            ->orWhere('address', 'LIKE', '%'.$request['search'].'%')
+                            ->paginate(7)
+                            ->setPath('');
+
+            $datas->appends(array(
+                'search' => $request['search'],
+            ));
+
+            if(count($datas) > 0) {
+                return view('show-data', [
+                    'datas' => $datas
+                ]);
+            }            
+
+            return view('show-data', ['datas' => $datas]);
+        } else {
+            return back()->with('error','検索キーワードを入力してください。');
+        }
     }
 }
