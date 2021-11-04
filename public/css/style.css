@@ -1,0 +1,36 @@
+body {
+    background-color: #fce9e5;
+    font-family: 'Kosugi', sans-serif;
+    overflow: hidden;
+}
+
+#pagination p {
+    display: none;
+}
+
+.ellipsis {
+    display: inline-block; 
+    width: 250px; 
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}           
+
+.logo_img {
+    padding: 16px;
+}
+
+.header {
+    position: absolute;
+    margin-left: 5vw;
+}
+
+.search_container {
+    position: relative;
+}
+
+#search {
+    position: absolute;
+    left: 8px;
+    top: 5px;
+}

@@ -5,49 +5,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>NetReal</title>
+        <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/1877f468c8.js" crossorigin="anonymous"></script>
-
-        <style>
-            body {
-                background-color: #fce9e5;
-                font-family: 'Kosugi', sans-serif;
-                overflow: hidden;
-            }
-
-            #pagination p {
-                display: none;
-            }
-
-            .ellipsis {
-                display: inline-block; 
-                width: 250px; 
-                white-space: nowrap;
-                overflow: hidden; 
-                text-overflow: ellipsis;
-            }           
-            
-            .logo_img {
-                padding: 16px;
-            }
-            
-            .header {
-                position: absolute;
-                margin-left: 5vw;
-            }
-
-            .search_container {
-                position: relative;
-            }
-
-            #search {
-                position: absolute;
-                left: 8px;
-                top: 5px;
-            }
-        </style>
     </head>
 
     <body class="h-screen ">
